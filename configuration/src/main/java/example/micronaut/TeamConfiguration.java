@@ -13,14 +13,12 @@ import java.util.List;
 @Setter
 @Serdeable
 @JsonIgnoreProperties("builder")
-//tag::teamConfigClassNoBuilder[]
 @ConfigurationProperties("team")
 public class TeamConfiguration {
-    //tag::gettersandsetters[]
+
     private String name;
     private String color;
     private List<String> playerNames;
-//end::teamConfigClassNoBuilder[]
 
     public TeamConfiguration() {
     }
@@ -28,4 +26,4 @@ public class TeamConfiguration {
     @ConfigurationBuilder(prefixes = "with", configurationPrefix = "team-admin")
     protected TeamAdmin.Builder builder = TeamAdmin.builder();
 }
-//end::gettersandsetters[]
+
