@@ -52,5 +52,13 @@ micronaut {
     }
 }
 
+graalvmNative {
+    binaries {
+        main {
+            imageName.set('mn-graalvm-application')
+            buildArgs.add('--verbose')
+        }
+    }
+}
 
 
